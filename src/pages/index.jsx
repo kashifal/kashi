@@ -11,6 +11,11 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
+  VueIcon,
+  ReactIcon,
+  TailwindIcon,
+  FigmaIcon,
+  FiverrIcon
 } from '@/components/SocialIcons'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -20,6 +25,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import logoAirbnb from '@/images/logos/md.png'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/sp.png'
+import fiverr from '@/images/logos/fiverr.png';
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -139,6 +145,16 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
+      company: 'fiverr',
+      title: 'Frontend Engineer - React Vue and Tailwind plus wireframes using Figma',
+      logo: fiverr,
+      start: '2021',
+      end: {
+        label: 'Side Earnings',
+        dateTime: new Date().getFullYear(),
+      },
+    },
+    {
       company: 'Soft Pyramid',
       title: 'React and Vue Developer',
       logo: logoPlanetaria,
@@ -204,7 +220,7 @@ function Resume() {
         download
         className="group mt-6 w-full"
       >
-        Download CV
+        Download CV 
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -263,18 +279,23 @@ export default function Home({ articles }) {
             <SocialLink
               href="https://twitter.com/MoSulehria"
               aria-label="Follow on Twitter"
-              icon={TwitterIcon}
+              icon={VueIcon}
+            />
+            <SocialLink
+              href="https://twitter.com/MoSulehria"
+              aria-label="Follow on Twitter"
+              icon={ReactIcon}
             />
              
             <SocialLink
               href="https://github.com/kashifal"
               aria-label="Follow on GitHub"
-              icon={GitHubIcon}
+              icon={TailwindIcon}
             />
             <SocialLink
               href="https://www.linkedin.com/in/kashif-sulehria-9436b3257/"
               aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+              icon={FigmaIcon}
             />
           </div>
         </div>
